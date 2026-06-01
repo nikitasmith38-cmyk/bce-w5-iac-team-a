@@ -1,1 +1,10 @@
-
+# Terraform state files
+*.tfstate
+*.tfstate.backup
+# Terraform working directory
+.terraform/
+.terraform.lock.hcl
+# Variable values — contains credentials
+terraform.tfvars
+# macOS
+.DS_Store
