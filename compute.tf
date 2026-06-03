@@ -22,7 +22,7 @@ root_block_device {
   encrypted   = true
 }
 
-tags = {
-  Name = &quot;workforceconnect-ec2&quot;
+ tags = {
+   Name = "workforceconnect-ec2"
  }
 }
