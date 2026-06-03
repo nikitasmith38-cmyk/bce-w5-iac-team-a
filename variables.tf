@@ -34,8 +34,7 @@ variable "private_subnet_cidr_b" {
 }
 
 variable "ami_id" {
-  description = "AMI ID for the EC2 instance — must match your deployed
-AMI"
+  description = "AMI ID for the EC2 instance — must match your deployed AMI"
   type        = string
 }
 
