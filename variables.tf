@@ -49,17 +49,6 @@ variable "key_pair_name" {
   type        = string
 }
 
-variable "db_username" {
-  description = "Master username for the RDS instance"
-  type        = string
-}
-
-variable "db_password" {
-  description = "Master password for the RDS instance"
-  type        = string
-  sensitive   = true
-}
-
 variable "db_name" {
   description = "Name of the initial database"
   type        = string
