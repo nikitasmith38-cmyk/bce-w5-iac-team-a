@@ -5,7 +5,7 @@ resource "aws_key_pair" "main" {
 }
 
 # EC2 Instance
-resource "aws_instance" "workforceconnect-app-server" {
+resource "aws_instance" "workforceconnect" {
   ami                         = "ami-0b9064170e32bde34" # Ubuntu 22.04 LTS in us-east-2
   instance_type               = "t3.micro"
   subnet_id                   = aws_subnet.public.id
