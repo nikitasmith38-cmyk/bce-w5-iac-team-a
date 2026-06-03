@@ -7,10 +7,10 @@ resource "aws_key_pair" "main" {
 # EC2 Instance
 resource "aws_instance" "workforceconnect-app-server" {
   ami           = "ami-0eab37cfdc33e8e65"
-  instance_type = "t2.micro"
-  subnet_id     = aws_subnet.public.id 
+  instance_type = "t3.micro"
+  subnet_id     = "subnet-0388f6a18fe7661bf"
   vpc_security_group_ids = [aws_security_group.ec2.id]
-  key_name      = aws_key_pair.main.key_name
+  key_name      = "workforceconnect-key"
 
 # Assigns a public IP — required for SSH and HTTP access
 associate_public_ip_address = true
@@ -23,6 +23,6 @@ root_block_device {
 }
 
  tags = {
-   Name = "workforceconnect-ec2"
+   Name = "workforceconnect-app-server"
  }
 }
