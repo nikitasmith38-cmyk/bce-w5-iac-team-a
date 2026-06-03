@@ -6,7 +6,7 @@ resource "aws_key_pair" "main" {
 
 # EC2 Instance
 resource "aws_instance" "workforceconnect-app-server" {
-  ami           = "ami-0b9064170e32bde34"
+  ami           = "ami-0eab37cfdc33e8e65"
   instance_type = "t2.micro"
   subnet_id     = aws_subnet.public.id 
   vpc_security_group_ids = [aws_security_group.ec2.id]
