@@ -12,6 +12,7 @@ resource "aws_instance" "workforceconnect" {
   vpc_security_group_ids      = [aws_security_group.ec2.id]
   key_name                    = aws_key_pair.main.key_name
   associate_public_ip_address = true
+  iam_instance_profile        = aws_iam_instance_profile.ec2_profile.name
 
   # Root volume — 20 GB matches your existing instance
   root_block_device {
