@@ -1,7 +1,7 @@
 # Key Pair — registers your existing public key
 resource "aws_key_pair" "main" {
   key_name   = var.key_pair_name
-  public_key = file("~/.ssh/workforceconnect-key.pub") # Path to your local public key
+  public_key = file(pathexpand("~/.ssh/workforceconnect-key.pub") # Path to your local public key
 }
 
 # EC2 Instance
