@@ -23,3 +23,8 @@ output "rds_port" {
   description = "Port for the RDS instance"
   value       = aws_db_instance.main.port
 }
+
+output "db_secret_arn" {
+  description = "ARN of the Secrets Manager secret for DB credentials"
+  value       = data.aws_secretsmanager_secret.db_credentials.arn
+}
